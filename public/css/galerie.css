@@ -1,0 +1,149 @@
+/* Style général de la galerie */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
+}
+
+body {
+    color: #333;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Barre de navigation stylée */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: rgba(255, 215, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffd700;
+    color: #333;
+    transform: translateY(-5px);
+}
+
+/* Styles pour les boutons */
+.button-container {
+    margin: 20px 0;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; /* Fond noir */
+    color: #fff; /* Texte blanc */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #555; /* Fond gris au survol */
+    transform: translateY(-2px); /* Effet de levée au survol */
+}
+
+/* Textes dans des conteneurs stylisés */
+.text-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Largeur maximum du conteneur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-container:hover {
+    transform: translateY(-5px); /* Effet de levée au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000; /* Texte noir pour plus de contraste */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #000; /* Texte noir */
+}
+
+/* Grille d'images */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent pour un effet moderne */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #000; /* Texte noir */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; /* Empile les items en une seule colonne pour les petits écrans */
+    }
+
+    .gallery-item {
+        width: 100%; /* Les éléments prennent toute la largeur sur mobile */
+    }
+}

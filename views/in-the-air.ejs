@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Ajout de la police Poppins -->
+    <link rel="stylesheet" href="/css/<%= stylesheet %>"> <!-- Lien vers le CSS spécifique -->
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/in-the-air">In the Air</a></li>
+            <li><a href="/on-the-road">On the Road</a></li>
+            <li><a href="/afternoon-ramatuelle">An Afternoon in Ramatuelle</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section principale avec l'image de fond -->
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="glow">In the Air</h1>
+            <p class="glow-text">Cette bougie incarne l’esprit même du voyage, mêlant les notes puissantes du cuir usé aux effluves de kérosène, comme une promesse d’aventure à chaque allumage. L'odeur, puissante et presque palpable, évoque les souvenirs des hublots embrumés et des ciels infinis, où l’air chaud s’entrelace avec des parfums de vie, et chaque souffle devient un récit. C'est l'énergie d'un départ, l'adrénaline des horizons à découvrir, capturée dans la cire.</p>
+        </div>
+    </div>
+
+    <!-- Section descriptive -->
+    <section class="description">
+        <div class="content">
+            <h2>À propos de "In the Air"</h2>
+            <p class="glow-text">
+                "In the Air" capture l'essence des voyages en avion, les émotions qui nous habitent et les souvenirs qui se forment. Chaque vol est une nouvelle aventure, un moment de réflexion et d'évasion où le monde d'en bas devient flou, et où l'imagination prend son envol.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <%- include('partials/footer') %>
+
+    <script src="/js/script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Section principale avec l'image de fond et l'effet de flamme */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    background: url('/images/karl.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    animation: candleFlicker 5s infinite ease-in-out; /* Effet de flamme */
+}
+
+/* Superposition pour rendre le texte plus lisible */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
+}
+
+.hero-content {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond opaque ou semi-transparent */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Style pour le texte du titre */
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Blanc pur pour le texte */
+}
+
+/* Style pour le texte de description */
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Blanc pur pour plus de lisibilité */
+}
+
+/* Effet de vacillement de la flamme pour la section principale */
+@keyframes candleFlicker {
+    0%, 100% {
+        opacity: 0.9;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 0.6;
+        filter: brightness(1.4);
+    }
+    75% {
+        opacity: 0.7;
+        filter: brightness(1.2);
+    }
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 500px; /* Hauteur du slider */
+    margin: auto;
+    overflow: hidden; /* Empêche les débordements */
+    animation: fadeInOut 6s infinite; /* Appliquer l'effet de fade-in fade-out */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Style des slides */
+.slide {
+    display: none; /* Masque les images par défaut */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Contient l'image sans la déformer */
+}
+
+.active {
+    display: block;
+    animation: fadeEffect 3s ease-in-out; /* Transition douce pour la slide active */
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0.6;
+        transform: scale(1.05); /* Légère montée en zoom */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Style pour les boutons */
+.btn-group {
+    display: flex;
+    justify-content: center; /* Centre les boutons */
+    gap: 20px; /* Espace entre les boutons */
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 50px; /* Bouton arrondi pour plus d'élégance */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Effet d'ombre sous le bouton */
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    transform: translateY(-5px); /* Légère élévation à l'hover pour l'effet dynamique */
+}
+
+/* Section descriptive */
+.description {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.description .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .description h2 {
+        font-size: 2em;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+}

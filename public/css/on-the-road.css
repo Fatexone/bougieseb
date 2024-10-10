@@ -1,0 +1,158 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Barre de navigation stylée */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: rgba(255, 215, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffd700;
+    color: #333;
+    transform: translateY(-5px);
+}
+
+/* Section principale avec une image de fond */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    background: url('/images/ontheroad.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Section descriptive */
+.description {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.description .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.description p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Effet de texte lumineux pour le titre et le texte */
+.glow {
+    color: #000; /* Couleur du texte noir plus foncé */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
+                 0 0 10px rgba(255, 255, 255, 0.6), 
+                 0 0 15px rgba(255, 215, 0, 0.8), 
+                 0 0 20px rgba(255, 215, 0, 0.4); /* Ombre pour créer l'effet lumineux */
+}
+
+.glow-text {
+    color: #000; /* Couleur du texte noir plus foncé */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
+                 0 0 10px rgba(255, 255, 255, 0.6), 
+                 0 0 15px rgba(255, 215, 0, 0.8), 
+                 0 0 20px rgba(255, 215, 0, 0.4); /* Ombre pour créer l'effet lumineux */
+}
