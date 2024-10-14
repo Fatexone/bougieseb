@@ -1,40 +1,49 @@
-// Gestion du défilement pour la barre de navigation
+// Change navigation background on scroll
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
+        nav.classList.add('scrolled'); // Add 'scrolled' class if user scrolls down
     } else {
-        nav.classList.remove('scrolled');
+        nav.classList.remove('scrolled'); // Remove 'scrolled' class when at the top
     }
 });
-let slideIndex = 0;
-const slides = document.getElementsByClassName("slide");
 
-function showSlides() {
-    // Vérifier si des slides existent
-    if (slides.length === 0) {
-        console.error("Aucune slide trouvée");
-        return;
+// Parallax effect for the hero section content
+window.addEventListener('scroll', function() {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.transform = `translateY(${window.scrollY * 0.5}px)`; // Parallax effect based on scroll
     }
+});
 
-    // Masquer toutes les slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
+// Track page views when the page is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('/track-page-view', {
+        method: 'POST'
+    }).catch(error => console.error('Error tracking page view:', error));
+});
 
-    slideIndex++;
-    // Si on dépasse le nombre de slides, on recommence à la première
-    if (slideIndex > slides.length) { 
-        slideIndex = 1; 
-    }
+// Track Buy Button Clicks
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default link behavior
 
-    // Afficher la slide active uniquement si elle existe
-    if (slides[slideIndex - 1]) {
-        slides[slideIndex - 1].style.display = "block";  
-    }
+        const productId = button.getAttribute('data-product-id'); // Get the product ID from data attribute
 
-    setTimeout(showSlides, 4000); // Changer d'image toutes les 4 secondes
-}
-
-// Lancer le slider
-showSlides();
+        // Send a POST request to track the click
+        fetch('/track-buy-click', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ productId }) // Send the product ID to the server
+        }).then(response => {
+            if (response.ok) {
+                // Redirect to the Maison ST product page after tracking the click
+                window.location.href = button.href;
+            } else {
+                console.error('Failed to track buy click:', response.statusText);
+            }
+        }).catch(error => console.error('Error tracking buy click:', error));
+    });
+});

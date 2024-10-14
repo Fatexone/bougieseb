@@ -1,152 +1,39 @@
-/* Style de base pour tous les éléments */
+/* Style général */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Police élégante et moderne */
 }
 
-/* Style pour le body avec une couleur de fond artistique inspirée des bougies */
 body {
-    background: linear-gradient(145deg, #FFEBB7, #FFDDC1, #D1C4E9); /* Couleurs douces rappelant la chaleur et la lumière des bougies */
     color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Style pour le conteneur principal du contenu */
-.background {
-    width: 100%;
-    max-width: 1200px;
-    padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.85); /* Légère transparence pour mettre en valeur le texte sur le fond artistique */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-color: #ffffff; /* Fond blanc pur pour un design sobre */
     text-align: center;
-}
-
-/* Style pour le titre principal */
-h1 {
-    font-size: 3em;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Style pour les paragraphes */
-p {
-    font-size: 1.2em;
+    padding: 20px;
     line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    animation: fadeIn 2s ease-in-out;
 }
 
-/* Style pour les liens */
-a {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #00539C;
-    color: white;
-    text-decoration: none;
-    margin: 15px 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-a:hover {
-    background-color: #003d7a;
-    transform: translateY(-5px);
-}
-
-/* Style pour le footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.social-links a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-/* Animation de l'apparition en fondu */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Style responsive pour les petits écrans */
-@media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-        padding: 0 10px;
-    }
-
-    .background {
-        padding: 20px 10px;
-    }
-
-    a {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-}
-
-/* Style pour la barre de navigation */
+/* Barre de navigation responsive */
 nav {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
+    background-color: #ffffff;
     padding: 15px 0;
     text-align: center;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #f0f0f0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -154,12 +41,113 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 300;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ddd;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 80px; /* Adjusted for smaller screens */
+    height: auto;
+}
+
+.footer-contact p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.footer-contact a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive styles for menu and footer */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 60px; /* Smaller logo for smaller screens */
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-logo img {
+        width: 50px; /* Even smaller logo for small screens */
+    }
+
+    .footer-contact p {
+        font-size: 0.9em;
+    }
+
+    .footer-social img {
+        width: 25px;
+        height: 25px;
+    }
 }

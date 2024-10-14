@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/<%= stylesheet %>">
+    <title>Galerie du Savoir-Faire - Bougies Sébastien</title>
+    <link rel="stylesheet" href="/css/galerie.css"> <!-- Lien direct vers le CSS spécifique -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Ajout de la police Poppins -->
 </head>
 <body>
@@ -16,7 +16,6 @@
         <li><a href="/in-the-air">In the Air</a></li>
         <li><a href="/on-the-road">On the Road</a></li>
         <li><a href="/afternoon-ramatuelle">An Afternoon in Ramatuelle</a></li>
-        
     </ul>
 </nav>
 
@@ -29,7 +28,6 @@
 <section class="introduction">
     <div class="text-container">
         <h1>Galerie du Savoir-Faire</h1>
-        <p>Au-delà du rôle d’employé, de confident ou de conseiller que j’ai tenu auprès de Karl, j’ai toujours été, avant tout, un admirateur. Fan de son génie, de sa richesse culturelle inépuisable, de son esprit toujours en ébullition. J’ai été témoin de tant de moments précieux, des instants où Karl révélait toute l’étendue de sa créativité et de sa vision du monde. Chaque jour, il m’émerveillait. Il était bien plus qu’un simple mentor ou un patron ; il était une source d’inspiration perpétuelle.</p>
         <p>Tel un fan, j’ai capturé des fragments de son existence à travers mon objectif, des photos qui, aujourd’hui, me rappellent non seulement sa présence, mais aussi tout ce qu’il a éveillé en moi. Ces clichés, ces instants figés, sont bien plus que de simples images. Ils sont porteurs d’odeurs, de sons, de sensations qui, à travers le temps, sont devenus presque palpables.</p>
     </div>
 </section>
@@ -37,13 +35,31 @@
 <!-- Cheminement de création des bougies -->
 <section class="creation-process">
     <div class="text-container">
-        <h2>Le Cheminement Créatif de Sébastien </h2>
+        <h2>Le Cheminement Créatif de Sébastien</h2>
         <p>Chaque bougie que Sébastien crée est le reflet de son parcours, un mélange d'émotions et de souvenirs. C'est un artisan au talent inné, un artiste qui, avec un crayon et une feuille, esquisse ses inspirations. Dans chaque coup de pinceau, on sent la passion, la ferveur d'un enfant des rues, et la douceur des figuiers qui l’entourent. La lenteur du processus de création est une danse, un rituel où chaque étape est soigneusement orchestrée.</p>
         <p>Il s'ouvre à la formation, apprenant à jouer avec les senteurs, à associer des fragrances qui racontent des histoires. Chaque bougie devient un chapitre de sa vie, une fragrance qui évoque la sérénité d’un après-midi à Ramatuelle. Dans son atelier, il compose avec l’odeur du temps qui passe, mélangeant les essences de son passé pour façonner un avenir lumineux. Et c’est ainsi qu’il offre au monde des souvenirs, des instants figés dans la cire.</p>
     </div>
 </section>
 
-<!-- Galerie d'images des bougies -->
+<!-- Collaboration and Buy buttons -->
+<section class="collaboration">
+    <div class="text-container">
+        <h2>Découvrez la collaboration avec Maison ST</h2>
+        <p>Chez <strong>Maison ST</strong>, nous sommes honorés de collaborer avec Sébastien Jondeau pour vous proposer ses créations uniques et exclusives. Chaque bougie est bien plus qu'un simple parfum, c'est une histoire, un souvenir, une invitation à voyager à travers les sens.</p>
+        <p>Les bougies de Sébastien sont disponibles en exclusivité sur notre site. Nous vous invitons à découvrir ces œuvres olfactives et à les intégrer dans votre quotidien pour prolonger ces moments de douceur et de sérénité chez vous.</p>
+        <p><strong>Cliquez sur les liens ci-dessous</strong> pour acheter et explorer l'univers créatif de Sébastien Jondeau, maintenant disponible grâce à <strong>Maison ST</strong>.</p>
+        
+        <!-- Boutons d'achat -->
+      <!-- Boutons d'achat -->
+<a href="https://maisonst.com/product1" class="buy-button" data-product-id="product1">Acheter la Bougie In the Air</a>
+<a href="https://maisonst.com/product2" class="buy-button" data-product-id="product2">Acheter la Bougie On the Road</a>
+<a href="https://maisonst.com/product3" class="buy-button" data-product-id="product3">Acheter la Bougie Afternoon in Ramatuelle</a>
+
+    </div>
+
+</section>
+
+<!-- Galerie d'images des bougies sans les boutons Acheter -->
 <section class="gallery">
     <div class="gallery-item">
         <img src="/images/seb1.jpg" alt="Projet de Fabrication 1">
@@ -58,6 +74,29 @@
         <p>Projet de Fabrication 3</p>
     </div>
 </section>
+
+<!-- Footer Section - Same as the other pages -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/images/logo.png" alt="Bougies Sébastien" class="logo">
+        </div>
+        <div class="footer-contact">
+            <p>Contactez-nous : <a href="mailto:contact@bougiessébastien.com">contact@bougiessébastien.com</a></p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="/images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="/images/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="/images/twitter-icon.png" alt="Twitter">
+            </a>
+        </div>
+    </div>
+</footer>
 
 <script src="/js/script.js"></script> <!-- Lien vers le fichier JavaScript -->
 </body>

@@ -3,27 +3,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
+    font-family: 'Poppins', sans-serif; /* Police élégante et moderne */
 }
 
 body {
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #ffffff; /* Fond blanc pur pour un design sobre */
     text-align: center;
     padding: 20px;
     line-height: 1.6;
 }
 
-/* Barre de navigation stylée */
+/* Barre de navigation minimaliste */
 nav {
-    background-color: #333;
-    padding: 15px 0;
+    background-color: #ffffff; /* Fond blanc pour la navigation */
+    padding: 20px 0;
     text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    border-bottom: 1px solid #f0f0f0; /* Ligne fine pour séparer */
 }
 
 nav ul {
@@ -40,20 +41,18 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #333; /* Texte noir pour une navigation simple */
     text-decoration: none;
     font-size: 1.2em;
-    font-weight: 600;
+    font-weight: 300; /* Poids de police plus léger pour une touche élégante */
     padding: 10px 15px;
-    border-radius: 30px;
-    background-color: rgba(255, 215, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #ffd700;
-    color: #333;
-    transform: translateY(-5px);
+    background-color: #f0f0f0; /* Fond gris clair à l'hover */
+    color: #000;
 }
 
 /* Styles pour les boutons */
@@ -64,43 +63,45 @@ nav ul li a:hover {
 .return-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333; /* Fond noir */
-    color: #fff; /* Texte blanc */
+    background-color: #333; /* Fond noir pour les boutons */
+    color: #ffffff; /* Texte blanc */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .return-button:hover {
-    background-color: #555; /* Fond gris au survol */
-    transform: translateY(-2px); /* Effet de levée au survol */
+    background-color: #555; /* Gris foncé au survol */
+    transform: translateY(-2px); /* Léger effet de levée */
 }
 
-/* Textes dans des conteneurs stylisés */
+/* Conteneurs de texte stylisés */
 .text-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px; /* Largeur maximum du conteneur */
+    background-color: rgba(255, 255, 255, 0.95); /* Fond blanc avec légère transparence */
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px; /* Largeur maximale */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
 .text-container:hover {
-    transform: translateY(-5px); /* Effet de levée au survol */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus forte au survol */
+    transform: translateY(-5px); /* Léger effet de levée au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
 }
 
-h1 {
-    font-size: 3em;
+h1, h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #000; /* Texte noir pour plus de contraste */
+    color: #333; /* Texte noir pour les titres */
+    font-weight: 400; /* Titre avec poids plus léger */
 }
 
 p {
     font-size: 1.2em;
     margin-bottom: 40px;
-    color: #000; /* Texte noir */
+    color: #555; /* Texte gris foncé pour plus de douceur */
 }
 
 /* Grille d'images */
@@ -109,41 +110,124 @@ p {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 50px; /* Espace au-dessus de la galerie */
 }
 
 .gallery-item {
     width: 300px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent pour un effet moderne */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: #ffffff; /* Fond blanc pour chaque élément */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Ombre légère pour un effet sobre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .gallery-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Effet de levée au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée au survol */
 }
 
 .gallery-item p {
     margin-top: 10px;
     font-size: 1.1em;
-    color: #000; /* Texte noir */
+    color: #333; /* Texte noir */
 }
 
-/* Responsive */
+/* Buy button styles */
+.buy-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #ff6600;
+    transform: translateY(-3px);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #444;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-contact p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.footer-contact a {
+    color: #ff6600; /* Brand color for the link */
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive styling for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .gallery {
-        flex-direction: column; /* Empile les items en une seule colonne pour les petits écrans */
+        flex-direction: column; /* Empile les éléments en colonne sur les petits écrans */
     }
 
     .gallery-item {
-        width: 100%; /* Les éléments prennent toute la largeur sur mobile */
+        width: 100%; /* Prend toute la largeur sur mobile */
     }
 }

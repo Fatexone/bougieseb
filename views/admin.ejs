@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/<%= stylesheet %>">
+</head>
+<body>
+    <h1>Admin Dashboard - Buy Button Clicks and Page Views</h1>
+
+    <!-- Display the number of page views -->
+    <h2>Total Page Views: <%= pageViewCount %></h2>
+
+    <!-- Table for Buy Button Clicks -->
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Clicks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% clicks.forEach(click => { %>
+                <tr>
+                    <td><%= click.productName %></td>
+                    <td><%= click.count %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

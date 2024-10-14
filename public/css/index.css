@@ -1,26 +1,31 @@
-/* Style général */
+/* Resetting default styles for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* General body styling */
 body {
     color: #333;
-    background-color: #f5f5f5;
+    background-color: #ffffff; /* Clean white background for a modern look */
     line-height: 1.6;
+    font-size: 16px;
 }
 
-/* Barre de navigation */
+/* Navigation styles */
 nav {
-    background-color: #333;
-    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 1px solid #f0f0f0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a light shadow to the nav */
 }
 
 nav ul {
@@ -36,205 +41,200 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 1.1em;
-    font-weight: 500;
+    font-weight: 300;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffd700;
+    color: #ff6600; /* Brand accent color on hover */
 }
 
-/* Section principale avec l'image de fond et l'effet de flamme */
+/* Hero section with background image */
 .hero-section {
     position: relative;
-    height: 90vh;
-    background: url('/images/karl.jpg') no-repeat center center/cover;
+    height: 80vh;
+    background-image: url('/images/home.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    overflow: hidden;
-    animation: candleFlicker 5s infinite ease-in-out; /* Effet de flamme */
+    color: #fff; /* White text for contrast */
+    padding: 0 20px;
+    margin-top: 80px; /* Adjusting for fixed nav */
 }
 
-/* Superposition pour rendre le texte plus lisible */
 .hero-section .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to enhance text readability */
 }
 
 .hero-content {
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6); /* Fond opaque ou semi-transparent */
-    padding: 30px;
-    border-radius: 10px;
+    position: relative;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
 }
 
-/* Style pour le texte du titre */
 .hero-content h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ffffff; /* Blanc pur pour le texte */
+    font-weight: 600; /* Bolder heading */
+    color: #333;
 }
 
-/* Style pour le texte de description */
 .hero-content p {
     font-size: 1.2em;
     margin-bottom: 20px;
-    color: #ffffff; /* Blanc pur pour plus de lisibilité */
+    color: #555;
+    line-height: 1.8;
 }
 
-/* Effet de vacillement de la flamme pour la section principale */
-@keyframes candleFlicker {
-    0%, 100% {
-        opacity: 0.9;
-        filter: brightness(1);
-    }
-    50% {
-        opacity: 0.6;
-        filter: brightness(1.4);
-    }
-    75% {
-        opacity: 0.7;
-        filter: brightness(1.2);
-    }
-}
-
-/* Slider */
-.slider {
-    position: relative;
-    max-width: 100%;
-    height: 500px; /* Hauteur du slider */
-    margin: auto;
-    overflow: hidden; /* Empêche les débordements */
-    animation: fadeInOut 6s infinite; /* Appliquer l'effet de fade-in fade-out */
-}
-
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* Style des slides */
-.slide {
-    display: none; /* Masque les images par défaut */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Contient l'image sans la déformer */
-}
-
-.active {
-    display: block;
-    animation: fadeEffect 3s ease-in-out; /* Transition douce pour la slide active */
-}
-
-@keyframes fadeEffect {
-    0% {
-        opacity: 0.6;
-        transform: scale(1.05); /* Légère montée en zoom */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Style pour les boutons */
+/* Button styles */
 .btn-group {
     display: flex;
-    justify-content: center; /* Centre les boutons */
-    gap: 20px; /* Espace entre les boutons */
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
 }
 
 .btn {
-    padding: 15px 30px;
-    background-color: #ffd700;
-    color: #333;
+    padding: 12px 24px;
+    background-color: #333;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.4em;
-    font-weight: bold;
-    border-radius: 50px; /* Bouton arrondi pour plus d'élégance */
+    font-size: 1.2em;
+    font-weight: 300;
+    border-radius: 50px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Effet d'ombre sous le bouton */
+    border: none;
 }
 
 .btn:hover {
-    background-color: #ffcc00;
-    transform: translateY(-5px); /* Légère élévation à l'hover pour l'effet dynamique */
+    background-color: #ff6600; /* Change to brand color on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px); /* Smooth lift on hover */
 }
 
-/* Section descriptive */
+/* Description section */
 .description {
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     text-align: center;
-}
-
-.description .content {
-    max-width: 800px;
-    margin: 0 auto;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 30px;
 }
 
 .description h2 {
     font-size: 2.5em;
+    color: #333;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .description p {
     font-size: 1.2em;
     line-height: 1.8;
+    color: #666;
     margin-bottom: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #444;
     text-align: center;
-    padding: 10px 0;
 }
 
-footer a {
-    color: #ffd700;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-contact p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.footer-contact a {
+    color: #ff6600; /* Brand color for the link */
     text-decoration: none;
 }
 
-footer a:hover {
+.footer-contact a:hover {
     text-decoration: underline;
 }
 
-/* Responsive */
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive styling for footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-logo img {
+        width: 80px;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
 
     .hero-content p {
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1.1em;
     }
 
     .description h2 {
@@ -244,4 +244,46 @@ footer a:hover {
     .description p {
         font-size: 1em;
     }
+
+    .hero-section {
+        height: 60vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+
+    .description h2 {
+        font-size: 1.8em;
+    }
+
+    .description p {
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
